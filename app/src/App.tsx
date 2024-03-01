@@ -5,9 +5,9 @@ import { ThemeProvider } from "next-themes"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Toaster } from "sonner"
 // Routes
-import { open_routes, auth_routes } from "./routes"
-// Layouts
-import { AuthLayout } from "./layout/auth/AuthLayout"
+import { routes } from "./routes"
+// Layout
+import { Layout } from "./layout/Layout"
 
 export const App = ()=> {
 
@@ -17,18 +17,11 @@ export const App = ()=> {
 
       <BrowserRouter>
           <Routes>
-            {auth_routes.map((route, index) => (
+            {routes.map((route, index) => (
                 <Route
                     key={index}
                     path={route.path}
-                    element={<AuthLayout>{route.component}</AuthLayout>}/>
-            ))}
-
-            {open_routes.map((route, index) => (
-                <Route
-                    key={index}
-                    path={route.path}
-                    element={route.component}/>
+                    element={<Layout>{route.component}</Layout>}/>
             ))}
           </Routes>  
         </BrowserRouter>

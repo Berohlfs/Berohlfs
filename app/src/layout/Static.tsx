@@ -1,11 +1,17 @@
 // Radix
-import { DropdownMenu, Button, Flex, Heading, Separator } from "@radix-ui/themes"
-import { CaretDownIcon } from "@radix-ui/react-icons"
+import { DropdownMenu, Button, Flex, Heading, Separator, Box } from "@radix-ui/themes"
+import { HamburgerMenuIcon } from "@radix-ui/react-icons"
 // Libs
 import Cookies from "js-cookie"
 import { useNavigate } from "react-router-dom"
+// React
+import { ReactNode } from "react"
 
-export const Static = ()=> {
+type Props = {
+    children: ReactNode
+}
+
+export const Static = ({children}: Props)=> {
 
     const navigate = useNavigate()
 
@@ -15,13 +21,13 @@ export const Static = ()=> {
     }
 
     return (<>
+    <Box className={'fixed top-0 right-0 w-full bg-[var(--color-background)]'}>
         <Flex p={'4'} justify={'between'}>
-            <Heading>MRF</Heading>
+            <Heading>Bernardo Rohlfs</Heading>
             <DropdownMenu.Root>
                 <DropdownMenu.Trigger>
                     <Button variant={'soft'}>
-                        Menu
-                        <CaretDownIcon />
+                        <HamburgerMenuIcon />
                     </Button>
                 </DropdownMenu.Trigger>
                 <DropdownMenu.Content>
@@ -37,5 +43,10 @@ export const Static = ()=> {
             </DropdownMenu.Root>
         </Flex>
         <Separator className={'w-full'}/>
+        </Box>
+        <Box pt={'9'}>
+           {children} 
+        </Box>
+        
     </>)    
 }
