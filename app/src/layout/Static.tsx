@@ -17,7 +17,7 @@ export const Static = ({children}: Props)=> {
     type Contato = {text: string, Icon: JSX.Element, link?: string}
 
     const contatos: Contato[] = [
-        {text: '+55 (31) 99959-200', Icon: <ChatBubbleIcon/>},
+        {text: '+55 (31) 99959-2002', Icon: <ChatBubbleIcon/>},
         {text: 'berohlfs@gmail.com', Icon: <EnvelopeClosedIcon/>},
         {text: 'Acessar meu perfil no LinkedIn.', Icon: <LinkedInLogoIcon/>, link: 'https://linkedin.com/in/bernardo-rohlfs-a09b61232'},
         {text: 'Acessar meu perfil no Instagram.', Icon: <InstagramLogoIcon/>, link: 'https://instagram.com/berohlfs'},
