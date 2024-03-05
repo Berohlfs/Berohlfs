@@ -35,7 +35,7 @@ export const Repos = ()=> {
     }
 
     useEffect(()=> {
-        setTimeout(getRepos, 1000)
+        setTimeout(getRepos, 900)
     },[])
 
     const RepoSkeleton = ()=> {

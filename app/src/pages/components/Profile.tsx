@@ -34,7 +34,7 @@ export const Profile = ()=> {
     }
 
     useEffect(()=> {
-        setTimeout(getProfile, 4000)
+        setTimeout(getProfile, 900)
     },[])
 
     type ProfileAttributeProps = {
