@@ -1,5 +1,5 @@
 // Radix
-import { DropdownMenu, Button, Flex, Heading, Separator, Box } from "@radix-ui/themes"
+import { DropdownMenu, Button, Flex, Heading, Separator, Box, Avatar } from "@radix-ui/themes"
 import { HamburgerMenuIcon } from "@radix-ui/react-icons"
 // Libs
 import Cookies from "js-cookie"
@@ -21,26 +21,17 @@ export const Static = ({children}: Props)=> {
     }
 
     return (<>
-    <Box className={'fixed top-0 right-0 w-full bg-[var(--color-background)]'}>
-        <Flex p={'4'} justify={'between'}>
-            <Heading>Bernardo Rohlfs</Heading>
-            <DropdownMenu.Root>
-                <DropdownMenu.Trigger>
-                    <Button variant={'soft'}>
-                        <HamburgerMenuIcon />
-                    </Button>
-                </DropdownMenu.Trigger>
-                <DropdownMenu.Content>
-                    <DropdownMenu.Item 
-                        shortcut="⌘">
-                            Characters
-                    </DropdownMenu.Item>
-                    <DropdownMenu.Separator />
-                    <DropdownMenu.Item color="red" onClick={logout}>
-                        Log out
-                    </DropdownMenu.Item>
-                </DropdownMenu.Content>
-            </DropdownMenu.Root>
+    <Box className={'fixed top-0 right-0 w-full bg-[var(--color-background)] z-50'}>
+        <Flex 
+            p={'4'} 
+            align={'center'}
+            gap={'3'}>
+
+            <Avatar fallback={'BR'}/>
+            <Heading size={'2'}>
+                Meu Portifólio
+            </Heading>
+         
         </Flex>
         <Separator className={'w-full'}/>
         </Box>

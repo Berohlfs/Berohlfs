@@ -13,7 +13,7 @@ export const App = ()=> {
 
   return (
     <ThemeProvider attribute={'class'}>
-      <Theme accentColor={'grass'}>
+      <Theme accentColor={'orange'}>
 
       <BrowserRouter>
           <Routes>
