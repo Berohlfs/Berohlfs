@@ -1,4 +1,4 @@
-### Hi there 👋
+### Hi!
 My name is Bernardo Rohlfs!
 
 I'm currently a Software Developer at Webimob Seguros Imobiliários :)
